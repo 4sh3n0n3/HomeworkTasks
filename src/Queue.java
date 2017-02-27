@@ -5,5 +5,5 @@ public interface Queue {
     void push(Object object);
     Object first();
     Object pop();
-    int size();
+    long size();
 }

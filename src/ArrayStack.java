@@ -19,7 +19,7 @@ public class ArrayStack implements Stack{
     public Object pop() {
         return data[--size];
     }
-    public long size() {
+    public int size() {
         return size;
     }
 }

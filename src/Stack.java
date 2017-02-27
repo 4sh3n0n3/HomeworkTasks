@@ -5,5 +5,5 @@ public interface Stack {
     void push(Object object);
     Object top();
     Object pop();
-    long size();
+    int size();
 }

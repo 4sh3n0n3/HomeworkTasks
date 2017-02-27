@@ -4,9 +4,7 @@
 public class ArrayQueue extends Node implements Queue {
     private Node head;
     private Node tail;
-    private int size;
-
-    public ArrayQueue(){}
+    private long size;
 
     public void push(Object object) {
         Node node = new Node();
@@ -31,7 +29,7 @@ public class ArrayQueue extends Node implements Queue {
         size--;
         return node.getValue();
     }
-    public int size() {
+    public long size() {
         return size;
     }
 }

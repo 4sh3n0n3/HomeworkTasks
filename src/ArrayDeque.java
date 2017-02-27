@@ -6,14 +6,16 @@ public class ArrayDeque extends Node implements Deque{
     private Node tail;
     private long size;
 
-    public ArrayDeque(){}
+    private void newDequeCreation(Node node) {
+        head = tail = node;
+        size = 0;
+    }
 
     public void pushInHead(Object object){
         Node node = new Node();
         node.setValue(object);
         if (head == null) {
-            head = tail = node;
-            size = 0;
+            newDequeCreation(node);
         } else {
             head.setNext(node);
             node.setPrev(head);
@@ -25,8 +27,7 @@ public class ArrayDeque extends Node implements Deque{
         Node node = new Node();
         node.setValue(object);
         if (head == null) {
-            head = tail = node;
-            size = 0;
+            newDequeCreation(node);
         } else {
             tail.setPrev(node);
             node.setNext(tail);
